@@ -956,7 +956,7 @@ main {
 .project-img {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 200px; /* Set a fixed height */
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 15px;
@@ -968,12 +968,19 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; /* Change from auto to 100% */
   background: transparent;
   z-index: 1;
   transition: var(--transition-1);
 }
 
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* Center the image */
+  transition: var(--transition-1);
+}
 .project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
 
 .project-item-icon-box {
